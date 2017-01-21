@@ -1,23 +1,106 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title>MetaCoin - Default Truffle App</title>
+  <title>Vote for Change</title>
   <link href='https://fonts.googleapis.com/css?family=Open+Sans:400,700' rel='stylesheet' type='text/css'>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/skeleton/2.0.4/skeleton.css" />
   <link href="./app.css" rel='stylesheet' type='text/css'>
+  <link href="./stylesheets/index.css" rel='stylesheet' type='text/css'>
+<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
   <script src="./app.js"></script>
+  <script src="./javascripts/hacking.js"></script>
 </head>
 <body>
-  <h1>MetaCoin</h1>
-  <h2>Example Truffle Dapp</h2>
-  <h3>You have <span class="black"><span id="balance"></span> META</span></h3>
+  <div class="background-container">
+  <div class="container">
+    <div class="intro">
+    <!-- header -->
+      <div class="row header">
+        <div class="eight columns left">
+          <h1>Vote for Change</h1>
+        </div>
+        <div class="four columns right">
+          Welcome back Michelle
+        </div>
+      </div>
 
-  <br>
-  <h1>Send</h1>
-  <br><label for="amount">Amount:</label><input type="text" id="amount" placeholder="e.g., 95"></input>
-  <br><label for="receiver">To Address:</label><input type="text" id="receiver" placeholder="e.g., 0x93e66d9baea28c17d9fc393b53e3fbdd76899dae"></input>
-  <br><br><button id="send" onclick="test()">Send MetaCoin</button>
-  <br><br><button id="test" onclick="test2()">Send</button>
-  <br><br>
-  <span id="status"></span>
+
+      <div class="row">
+        <div class="three offset-by-five columns">
+          <button class="start-setup">Setup</button>
+        </div>
+        <div class="four columns">
+          <p>
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+          </p>
+        </div>
+      </div>
+
+      <div class="row">
+        <div class="three offset-by-five columns">
+          <button>Veiw</button>
+        </div>
+        <div class="four columns">
+        <p>
+          Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+        </p>
+        </div>
+      </div>
+
+      <div class="row">
+        <div class="three offset-by-five columns">
+          <button>Groups</button>
+        </div>
+        <div class="four columns">
+          Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+        </div>
+      </div>
+    </div>
+    <!-- end intro -->
+
+    <div class="setup">
+      <div class="row header">
+        <div class="eight columns left">
+          <h1>Vote for Change: setup your vote</h1>
+        </div>
+        <div class="four columns right">
+          Welcome back Michelle
+        </div>
+      </div>
+
+      <div class="row">
+        <div class="six offset-by-five columns">
+          <form action="action_page.php">
+            <div>
+              <label for="startDate" class='start-date'> Start date: </label>
+              <input type="date" name="startDate" value="Mouse" id="startDate">
+            </div>
+
+            <div>
+              <label for="endDate" class="end-date"> End date: </label>
+              <input type="date" name="endDate" value="Mouse">
+            </div>
+
+            <div>
+              <label for="description" class="issue"> Issue description: </label>
+              <input type="text" name="description" value="Describe you issue" id="description">
+            </div>
+
+            <div>
+              <label for="options" class="options"> Options: </label>
+              <input type="text" name="options" value="other options" id="options">
+            </div>
+
+            <div>
+              <label for="allowed-voters" class="allowed"> Allowed voters: </label>
+              <input type="text" name="allowedVoters" id="allowedVoters">
+            </div>
+
+            <input type="submit" value="Create">
+          </form>
+        </div>
+      </div>
+  </div>
+  </div>
 </body>
 </html>
