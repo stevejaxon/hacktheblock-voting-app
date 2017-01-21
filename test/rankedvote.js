@@ -43,7 +43,7 @@ contract('RankedVote', function() {
             return rankedVote.issues.call(0).then(function (issue) {
                 assert.isNotNull(issue, "Expected there to be an issue created");
                 console.log('Issue details: ' + issue);
-                console.log('Issue start date: ' + issue.begin);
+                console.log('Issue start date: ' + issue[0]);
             });
 
 
