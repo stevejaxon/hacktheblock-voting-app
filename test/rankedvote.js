@@ -49,4 +49,29 @@ contract('RankedVote', function() {
 
         });
     });
+
+    it("should be able possible to retrieve all of the groups", function() {
+        var rankedVote = RankedVote.deployed();
+
+        console.log('in');
+        return rankedVote.createVotingGroup("test 1", {from: account_one, gas: 300000}).then(function(tx_id) {
+            return  rankedVote.createVotingGroup("test 2", {from: account_one, gas: 300000}).then(function(tx_id) {
+                return rankedVote.createVotingGroup("test 3", {from: account_one, gas: 300000}).then(function(tx_id) {
+                    var votingGroupNames = [];
+
+                    for(var j = 0; j < 10; j++) {
+                        console.log(j);
+                        console.log(rankedVote.votingGroupNames);
+                        rankedVote.votingGroupNames.call(j).then(function(votingGroupName) {
+                            votingGroupNames[j] = votingGroupName;
+                        });
+                    }
+
+                    assert.equal(3, votingGroupNames.length);
+                });
+            });
+        });
+    });
+
+
 });
