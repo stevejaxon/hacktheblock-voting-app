@@ -2,9 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="14031f5a-6bd5-4bc9-ae40-79c4d79d365a" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/contracts/RankedVote.sol" afterPath="$PROJECT_DIR$/contracts/RankedVote.sol" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/test/rankedvote.js" afterPath="$PROJECT_DIR$/test/rankedvote.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/REAME.md" afterPath="$PROJECT_DIR$/REAME.md" />
     </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
     <ignored path="$PROJECT_DIR$/temp/" />
@@ -22,11 +20,21 @@
   <component name="ExecutionTargetManager" SELECTED_TARGET="default_target" />
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="600">
-      <file leaf-file-name="RankedVote.sol" pinned="false" current-in-tab="true">
+      <file leaf-file-name="RankedVote.sol" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/contracts/RankedVote.sol">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="1365">
               <caret line="133" column="0" lean-forward="true" selection-start-line="133" selection-start-column="0" selection-end-line="133" selection-end-column="0" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="REAME.md" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/REAME.md">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="66">
+              <caret line="2" column="12" lean-forward="false" selection-start-line="2" selection-start-column="12" selection-end-line="2" selection-end-column="12" />
               <folding />
             </state>
           </provider>
@@ -104,6 +112,7 @@
         <option value="$PROJECT_DIR$/package.json" />
         <option value="$PROJECT_DIR$/test/rankedvote.js" />
         <option value="$PROJECT_DIR$/contracts/RankedVote.sol" />
+        <option value="$PROJECT_DIR$/REAME.md" />
       </list>
     </option>
   </component>
@@ -329,12 +338,12 @@
       <option name="presentableId" value="Default" />
       <updated>1485009811477</updated>
       <workItem from="1485009813577" duration="4153000" />
-      <workItem from="1485015357044" duration="6454000" />
+      <workItem from="1485015357044" duration="6974000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="10607000" />
+    <option name="totallyTimeSpent" value="11127000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-16" y="-16" width="3232" height="1732" extended-state="6" />
@@ -462,6 +471,14 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="1365">
           <caret line="133" column="0" lean-forward="true" selection-start-line="133" selection-start-column="0" selection-end-line="133" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/REAME.md">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="66">
+          <caret line="2" column="12" lean-forward="false" selection-start-line="2" selection-start-column="12" selection-end-line="2" selection-end-column="12" />
           <folding />
         </state>
       </provider>
