@@ -20,5 +20,10 @@
   "bugs": {
     "url": "https://github.com/stevejaxon/hacktheblock-voting-app/issues"
   },
-  "homepage": "https://github.com/stevejaxon/hacktheblock-voting-app#readme"
+  "homepage": "https://github.com/stevejaxon/hacktheblock-voting-app#readme",
+  "dependencies": {
+    "truffle-artifactor": "^2.0.1",
+    "web3": "^0.18.2",
+    "datejs": "1.0.0-rc3"
+  }
 }
