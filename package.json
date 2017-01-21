@@ -1,0 +1,24 @@
+{
+  "name": "hacktheblock-voting-app",
+  "version": "1.0.0",
+  "description": "An application for electronic voting on a blockchain",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/stevejaxon/hacktheblock-voting-app.git"
+  },
+  "keywords": [
+    "blockchain",
+    "voting",
+    "ethereum"
+  ],
+  "author": "SteveJaxon",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/stevejaxon/hacktheblock-voting-app/issues"
+  },
+  "homepage": "https://github.com/stevejaxon/hacktheblock-voting-app#readme"
+}
