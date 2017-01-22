@@ -1,8 +1,8 @@
 require('datejs');
-require('bluebird');
+var Promise = require('bluebird');
 
 contract('RankedVote', function(chairmanAccount) {
-    var account_one = '0x392c79d389baad8ff44f11fa30af660d7891f2bf';
+    var account_one = '0xd7da9f36861efebca3c844da7b1821501438408e';
 
     it("should not be possible to create an issue in the past", function() {
         var rankedVote = RankedVote.deployed();
@@ -79,16 +79,26 @@ contract('RankedVote', function(chairmanAccount) {
 
                     for(var j = 0; j < 3; j++) {
                         promises.push(rankedVote.votingGroupNames.call(j));
-                        console.log(typeof promises[j]);
                     }
 
-                    Promise.each(promises, function (value) {
+                    console.log("before " + promises);
+
+                    /*Promise.each(promises, function (value) {
                         console.log(value);
+                        debugger
                         votingGroupNames.push(value);
                     }).then(function () {
-                        assert.equal(3, votingGroupNames.length);
+                        // assert.equal(3, votingGroupNames.length);
                         console.log(votingGroupNames);
+                    }).catch(function (e) {
+                        console.log(e);
+                    });*/
+
+                    Promise.map(promises, function (value) {
+                       console.log(value);
                     });
+
+                    console.log("end");
                 });
             });
         });
