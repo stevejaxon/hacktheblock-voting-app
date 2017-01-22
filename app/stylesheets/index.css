@@ -96,3 +96,8 @@ input#options, input#description {
   height: 100px;
   width: 230px;
 }
+
+form {
+  border-left: solid black 2px;
+  padding-left: 20px;
+}
