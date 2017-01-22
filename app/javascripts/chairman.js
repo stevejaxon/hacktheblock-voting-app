@@ -1,5 +1,3 @@
-debugger;
-
 var rankedVote = RankedVote.deployed();
 
 function addIssue(id, startDate, endDate, description, options) {

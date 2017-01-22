@@ -2,28 +2,28 @@
 <html>
 <head>
   <title>Vote for Change</title>
+
   <link href='https://fonts.googleapis.com/css?family=Open+Sans:400,700' rel='stylesheet' type='text/css'>
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/skeleton/2.0.4/skeleton.css" />
+  <!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/skeleton/2.0.4/skeleton.css" /> -->
   <link href="./app.css" rel='stylesheet' type='text/css'>
+  <link href="../app/stylesheets/index.css" rel='stylesheet' type='text/css'>
   <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
   <script src="https://cdn.jsdelivr.net/bluebird/latest/bluebird.min.js"></script>
-  <script src="./app.js"></script>
+
 </head>
 <body>
-    <button type="submit" value="Create Group" onclick="test()">Create Group</button>
-    <button type="submit" value="Retrieve Group" onclick="retrieveVotingGroups()">Retrieve Group</button>
-  <div class="background-container">
+<script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.10.3/jquery-ui.min.js"></script>
+
   <div class="container">
     <div class="intro">
     <!-- header -->
+
       <div class="row header">
         <div class="eight columns left">
           <h1>Vote for Change</h1>
         </div>
-        <div class="four columns right">
-          Welcome back Michelle
-        </div>
       </div>
+      <hr/>
 
 
       <div class="row">
@@ -32,28 +32,37 @@
         </div>
         <div class="four columns">
           <p>
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+            Setup the issue that you need a fair vote on, ensure you lay out each option clearly
           </p>
         </div>
-      </div>
+      <!-- </div>
 
-      <div class="row">
+      <div class="row"> -->
         <div class="three offset-by-five columns">
-          <button>Veiw</button>
+          <button class="vote-button">Vote</button>
         </div>
         <div class="four columns">
         <p>
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+          Use your democratic right, vote now!
         </p>
         </div>
-      </div>
+      <!-- </div>
 
-      <div class="row">
+      <div class="row"> -->
         <div class="three offset-by-five columns">
-          <button>Groups</button>
+           <button type="submit" value="Create Group" onclick="test()">Create Group</button>
         </div>
         <div class="four columns">
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+          Create a group which will vote on your issue. This could be a constituency or a body of people.
+        </div>
+      <!-- </div>
+
+      <div class="row"> -->
+        <div class="three offset-by-five columns">
+          <button type="submit" value="Retrieve Group" onclick="retrieveVotingGroups()">Retrieve Group</button>
+        </div>
+        <div class="four columns">
+          Retrieve groups currently set up.
         </div>
       </div>
     </div>
@@ -101,7 +110,48 @@
           </form>
         </div>
       </div>
+    </div>
+
+
+
+    <!-- vote -->
+    <div class="vote">
+      <div class="row header">
+        <div class="eight columns left">
+          <h1>Vote for Change: Cast your vote</h1>
+        </div>
+      </div>
+
+      <div class="row">
+        <div class="six offset-by-five columns">
+          <section class="fake-voting">
+            <div>
+            These are the different options for todays vote. Please place them into an order of preference and then click submit. Once you have submitted your vote, it can't be re-submitted.
+            </div>
+            <div>
+              <ul class="ui-sortable">
+                <li>Vote Brexit</li>
+                <li>Vote Biscuits</li>
+                <li>Vote Weetabix</li>
+                <li>Vote Broomstick</li>
+              </ul>
+            </div>
+
+            <div>
+              <button class="submit-vote-button">Submit vote</button>
+            </div>
+          </section>
+          <script type="text/javascript">$(function  () {
+  $("ul.ui-sortable").sortable();
+});</script>
+
+          <div class="thankyou">
+            <h2>Thankyou, your vote has been submitted!</h2>
+          </div>
+        </div>
+      </div>
+    </div>
   </div>
-  </div>
+  <script src="./app.js"></script>
 </body>
 </html>

@@ -1,40 +1,14 @@
 body {
-  background: url(../images/westminster.jpg) no-repeat;
-  background: cover;
-  padding: 0;
+  background: url(../images/bird.jpg) no-repeat;
+  background-size: cover;
+  padding: 20px;
   margin: 0;
   color: rgb(0,0,0);
 }
 
-.background-container {
-  width: 100vw;
-  height: 100vh;
-  position: relative;
-  background: rgb(229,237,245);
-  overflow: hidden;
-}
-
-.background-container:before {
-  content: ' ';
-  display: block;
-  position: absolute;
-  left: 0;
-  top: 0;
-  width: 100%;
-  height: 100%;
-  /*z-index: -1;*/
-  opacity: 1;
-  background: url(../images/bird.jpg) no-repeat;
-  background-position: 50% 0;
-  -ms-background-size: cover;
-  -o-background-size: cover;
-  -moz-background-size: cover;
-  -webkit-background-size: cover;
-  background-size: cover;
-}
 
 h1 {
-  font-size: 24px;
+  font-size: 36px;
 }
 
 .right {
@@ -100,4 +74,18 @@ input#options, input#description {
 form {
   border-left: solid black 2px;
   padding-left: 20px;
+}
+
+ul {
+  font-size: 24px;
+}
+
+li {
+  list-style: none;
+  width: 70%;
+  background-color: white;
+  border: solid 1px #403f3f;
+  padding: 5px;
+  color: #383838;
+  text-align: center;
 }
