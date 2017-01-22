@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Manage voting groups</title>
+    <link href="./app.css" rel='stylesheet' type='text/css'>
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+    <script src="./app.js"></script>
+</head>
+<body>
+<span>Create a new voter group</span>
+<label for="groupName1" class='start-date'>Voter Group Name: </label>
+<input type="text" name="groupName" value="" id="groupName1">
+<button type="submit" value="Create Group" onsubmit="test()">Create Group</button>
+<div class="background-container">
+    <div class="container">
+        <div class="create">
+            <div class="row">
+                <div class="six offset-by-five columns">
+                    <div>
+                        <span>Create a new voter group</span>
+                        <label for="groupName" class='start-date'>Voter Group Name: </label>
+                        <input type="text" name="groupName" value="" id="groupName">
+                        <button type="submit" value="Create Group" onsubmit="test('Test 1')">Create Group</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+</body>
+</html>

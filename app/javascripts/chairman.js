@@ -15,24 +15,25 @@ function createVotingGroup(name) {
 }
 
 function retrieveVotingGroups() {
-    return rankedVote.votingGroupNames.then(function(groups) {
-        console.log(rankedVote.votingGroupNames);
-        console.log(groups);
-        return groups;
-    })
-    .catch(function (e) {
-        console.log(e);
+    var promises = [];
+
+    for(var j = 0; j < 3; j++) {
+        promises.push(rankedVote.votingGroupNames.call(j));
+    }
+    console.log(promises);
+
+    Promise.each(promises, function (value) {
+        votingGroupNames.push(value);
+    }).then(function () {
+        return votingGroupNames;
     });
+    console.log('after');
 }
 
 function test() {
     createVotingGroup("test 1");
     createVotingGroup("test 1");
     createVotingGroup("test 1");
-}
-
-function test2() {
-    console.log(retrieveVotingGroups());
 }
 
 

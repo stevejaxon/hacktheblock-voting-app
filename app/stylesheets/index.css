@@ -52,7 +52,7 @@ h1 {
 
 /* admin landing page */
 .intro {
-  display: flex
+  display: flex;
   justify-content: center;
   align-items: center;
 }
