@@ -1,7 +1,8 @@
 require('datejs');
+var Promise = require('bluebird');
 
-contract('RankedVote', function() {
-    var account_one = '0x540a0854d74c90c8269c891739b4e1938438a149';
+contract('RankedVote', function(chairmanAccount) {
+    var account_one = '0xd7da9f36861efebca3c844da7b1821501438408e';
 
     it("should not be possible to create an issue in the past", function() {
         var rankedVote = RankedVote.deployed();
@@ -11,8 +12,9 @@ contract('RankedVote', function() {
         var names = ["0x0000000000000000000000", "0x0000000000000001"];
 
         return rankedVote.createIssue(1, start.getTime(), end.getTime(), description, names, {from: account_one}).then(function(tx_id) {
-            assert.isNotNull(rankedVote.issues, "Expected that the vote has issues.");
-            assert.equal(0, rankedVote.issues.length, "Expected there to be no issues in the contract.")
+            console.log(tx_id);
+        }).catch(function (e) {
+            console.log(e);
         });
     });
 
@@ -33,20 +35,72 @@ contract('RankedVote', function() {
         var rankedVote = RankedVote.deployed();
         var start = Date.today();
         var end = Date.today().add(1).days();
-        var description = "Test";
-        var names = ["0x0000000000000000000000", "0x0000000000000001"];
+        var description = "Test vote";
+        var names = ["Spend the money", "Don't spend the money"];
 
         console.log('parameters: ' + 1 + ', ' + start.getTime() + ', ' + end.getTime() + ', ' + description + ', ' + names + ', ' + '{from: account_one, gas: 300000}');
 
         return rankedVote.createIssue(0, start.getTime(), end.getTime(), description, names, {from: account_one, gas: 300000}).then(function(tx_id) {
             assert.isNotNull(rankedVote.issues, "Expected that the vote has issues.");
-            return rankedVote.issues.call(0).then(function (issue) {
+            return rankedVote.issues.call(2).then(function (issue) {
                 assert.isNotNull(issue, "Expected there to be an issue created");
                 console.log('Issue details: ' + issue);
-                console.log('Issue start date: ' + issue.begin);
+                console.log(issue[0]);
+                console.log(issue[1].toNumber());
+                console.log('Issue start date: ' + issue[2].toNumber());
+                console.log('Issue end date: ' + issue[3].toNumber());
+                console.log(issue[4]);
+                console.log(issue[4][0]);
+                var prop1;
+                issue[4].call(0).then(function (proposal) {
+                    assert.isNotNull(proposal);
+                    console.log('The first proposal ' + proposal);
+                    prop1 = proposal;
+                });
+                console.log(prop1);
+            }).catch(function (e) {
+                console.log(e);
             });
 
 
+        });
+    });
+
+    it("should be able possible to retrieve all of the groups", function() {
+        var rankedVote = RankedVote.deployed();
+
+        console.log('in');
+        return rankedVote.createVotingGroup("test 1", {from: account_one, gas: 300000}).then(function(tx_id) {
+            return  rankedVote.createVotingGroup("test 2", {from: account_one, gas: 300000}).then(function(tx_id) {
+                return rankedVote.createVotingGroup("test 3", {from: account_one, gas: 300000}).then(function(tx_id) {
+                    var votingGroupNames = [];
+
+                    var promises = [];
+
+                    for(var j = 0; j < 3; j++) {
+                        promises.push(rankedVote.votingGroupNames.call(j));
+                    }
+
+                    console.log("before " + promises);
+
+                    /*Promise.each(promises, function (value) {
+                        console.log(value);
+                        debugger
+                        votingGroupNames.push(value);
+                    }).then(function () {
+                        // assert.equal(3, votingGroupNames.length);
+                        console.log(votingGroupNames);
+                    }).catch(function (e) {
+                        console.log(e);
+                    });*/
+
+                    Promise.map(promises, function (value) {
+                       console.log(value);
+                    });
+
+                    console.log("end");
+                });
+            });
         });
     });
 });

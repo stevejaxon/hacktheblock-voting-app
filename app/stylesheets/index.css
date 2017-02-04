@@ -1,0 +1,91 @@
+body {
+  background: url(../images/bird.jpg) no-repeat;
+  background-size: cover;
+  padding: 20px;
+  margin: 0;
+  color: rgb(0,0,0);
+}
+
+
+h1 {
+  font-size: 36px;
+}
+
+.right {
+  background-color: #48a0a5;
+}
+
+.left, .right {
+  padding: 15px;
+}
+
+.header {
+  width: 100vw;
+  margin-bottom: 30px;
+}
+
+/* admin landing page */
+.intro {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+button {
+  background-color: rgba(255, 255, 255, 0.7);
+  color: black;
+  border: solid 1.5px;
+  width: 150px;
+  height: 51px;
+  border-radius: 0;
+}
+
+/* setup */
+label {
+  display: inline;
+  margin-right: 20px;
+}
+
+input {
+  border-radius: 0 !important;
+  display: inline;
+}
+
+.start-date {
+  margin-right: 73px;
+}
+
+.end-date {
+  margin-right: 80px;
+}
+
+.options {
+  margin-right: 86px;
+}
+
+.allowed {
+  margin-right: 36px;
+}
+
+input#options, input#description {
+  height: 100px;
+  width: 230px;
+}
+
+form {
+  border-left: solid black 2px;
+  padding-left: 20px;
+}
+
+ul {
+  font-size: 24px;
+}
+
+li {
+  list-style: none;
+  width: 70%;
+  background-color: white;
+  border: solid 1px #403f3f;
+  padding: 5px;
+  color: #383838;
+  text-align: center;
+}

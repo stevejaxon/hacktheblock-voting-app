@@ -22,8 +22,9 @@
   },
   "homepage": "https://github.com/stevejaxon/hacktheblock-voting-app#readme",
   "dependencies": {
+    "bluebird": "^3.4.7",
+    "datejs": "1.0.0-rc3",
     "truffle-artifactor": "^2.0.1",
-    "web3": "^0.18.2",
-    "datejs": "1.0.0-rc3"
+    "web3": "^0.18.2"
   }
 }
